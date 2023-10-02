@@ -1,0 +1,16 @@
+Labels,Duration,Parents,Description
+A,3,,gathering requirements from stakeholdersand communicating with team membersand and ensuring that everyone is on the same page throughout the development process.
+B,2,A,creating a project planand defining the scope of workand and estimating the time and resources needed to complete the project.
+C,1,A,creating models of the software systemand such as UML diagrams and use cases.
+D,3,B,designing the software architectureand the user interfaceand and the database.
+H,2,C,coding the software according to the design.
+E,2,C,testing the software to ensure that it meets the requirements and works as expected.
+J,5,C,integrating the different components of the software system.
+F,2,E,deploying the software to production and making it available to users.
+G,2,E,fixing bugsand adding new featuresand and updating the software to keep it up-to-date.
+I,3,"D,H",tracking changes to the software and ensuring that the changes are managed in a controlled way.
+K,7,"F,G,I",ensuring that the software meets the quality standards.
+L,1,K, managing the software development projectand such as scheduling tasksand assigning resourcesand and tracking progress.
+M,3,L,identifying and mitigating risks to the software development project.
+N,5,M,managing changes to the software requirementsand designand or implementation.
+O,1,N,creating documentation for the softwareand such as user manualsand API documentationand and design documents.
