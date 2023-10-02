@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body id="container">
+             {% for i in l1: %}
+                 <div class="line" style="top: {{i[1]}}px;left:{{i[0]}}px;width:{{i[5]}}px ;rotate: {{i[4]}}deg;"></div>
+             {% endfor %}
+             {% for i in l2: %}
+                 <div class="line1" style="top: {{i[1]}}px;left:{{i[0]}}px;width:{{i[5]}}px ;rotate: {{i[4]}}deg;"></div>
+             {% endfor %}
+             {% for i in d.keys(): %}
+            <table id="{{i}}" border="2" style="text-align: center;position: absolute; left: {{d[i][0]}}px; top: {{d[i][1]}}px">
+                <tr>
+                    <th colspan="4">{{d[i][2][0]}}</th><th colspan="4">{{d[i][2][1]}}</th>
+                </tr>
+                <tr>
+                    <th colspan="2">{{d[i][2][2]}}</th><th colspan="4" rowspan="2"><textarea cols="4" rows="3" style="font-size: smaller;">{{d[i][3]}}</textarea></th><th colspan="2">{{d[i][2][3]}}</th>
+                </tr>
+                <tr>
+                    <th colspan="2">{{d[i][2][4]}}</th><th colspan="2">{{d[i][2][5]}}</th>
+                </tr>
+                <tr>
+                    <th colspan="4">{{d[i][2][6]}}</th><th colspan="4">{{d[i][2][7]}}</th>
+                </tr>
+            </table>
+             {% endfor %}
+    </body>
+</html>
+<style>
+    .line{
+        position: absolute;
+        border: 1px solid black;
+        transform-origin: 0% 0%;
+    }
+    .line1{
+        position: absolute;
+        border: 1px solid red;
+        transform-origin: 0% 0%;
+    }
+</style>
+<script>
+        var container=document.getElementById('container')
+        const line = document.querySelector('.line');
+        const x1 = 60/* your x1 coordinate */;
+        const y1 = 50/* your y1 coordinate */;
+        const x2 = 260/* your x2 coordinate */;
+        const y2 = 200/* your y2 coordinate */;
+        const angle = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI);
+        const length = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        line.style.top=`50px`;
+        line.style.left=`60px`;
+        //line.style.transform = `translate(${x1}px, ${y1}px) rotate(${angle}deg) scaleX(${length}px)`;
+        line.style.width=`${length}px`;
+        line.style.rotate=`${angle}deg`;
+</script>
